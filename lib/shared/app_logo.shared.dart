@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:school360/core/theme/color.theme.dart';
 
 class School360Logo extends StatelessWidget {
   const School360Logo({super.key});
@@ -10,21 +11,21 @@ class School360Logo extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: 'School',
+            text: 'Sikshya',
             style: GoogleFonts.outfit(
               fontSize: 30,
               fontWeight: FontWeight.w800,
               letterSpacing: -1.5,
-              color: Colors.black87,
+              color: AppColors.textPrimary,
             ),
           ),
           TextSpan(
-            text: '360',
+            text: 'Setu',
             style: GoogleFonts.outfit(
               fontSize: 30,
               fontWeight: FontWeight.w900,
               letterSpacing: -1.5,
-              color: Colors.blue,
+              color: AppColors.student,
             ),
           ),
         ],

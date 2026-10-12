@@ -43,7 +43,7 @@ class AppTextFormField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         prefixIcon: prefixIcon != null
-            ? Icon(prefixIcon, color: AppColors.primaryColor)
+            ? Icon(prefixIcon, color: AppColors.student)
             : null,
         suffixIcon: suffixIcon,
       ),

@@ -47,7 +47,7 @@ class AppSnackBar {
     show(
       context,
       message: message,
-      backgroundColor: AppColors.successColor,
+      backgroundColor: AppColors.success,
       icon: Icons.check_circle_outline,
     );
   }
@@ -57,7 +57,7 @@ class AppSnackBar {
     show(
       context,
       message: message,
-      backgroundColor: AppColors.dangerColor,
+      backgroundColor: AppColors.danger,
       icon: Icons.error_outline,
     );
   }
@@ -67,7 +67,7 @@ class AppSnackBar {
     show(
       context,
       message: message,
-      backgroundColor: AppColors.warningColor,
+      backgroundColor: AppColors.accentSoft,
       icon: Icons.warning_amber_outlined,
     );
   }

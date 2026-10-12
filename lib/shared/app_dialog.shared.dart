@@ -43,7 +43,7 @@ class AppDialog {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
-                  foregroundColor: AppColors.backgroundColor,
+                  foregroundColor: AppColors.background,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -69,8 +69,8 @@ class AppDialog {
       title: title,
       message: message,
       icon: Icons.check_circle_outline,
-      iconColor: AppColors.successColor,
-      buttonColor: AppColors.successColor,
+      iconColor: AppColors.success,
+      buttonColor: AppColors.success,
       buttonText: buttonText,
       onPressed: onPressed,
     );
@@ -88,8 +88,8 @@ class AppDialog {
       title: title,
       message: message,
       icon: Icons.error_outline,
-      iconColor: AppColors.dangerColor,
-      buttonColor: AppColors.dangerColor,
+      iconColor: AppColors.danger,
+      buttonColor: AppColors.danger,
       buttonText: buttonText,
       onPressed: onPressed,
     );
@@ -107,8 +107,8 @@ class AppDialog {
       title: title,
       message: message,
       icon: Icons.warning_amber_outlined,
-      iconColor: AppColors.warningColor,
-      buttonColor: AppColors.warningColor,
+      iconColor: AppColors.accentSoft,
+      buttonColor: AppColors.accentSoft,
       buttonText: buttonText,
       onPressed: onPressed,
     );
@@ -174,7 +174,7 @@ class AppDialog {
               style: ElevatedButton.styleFrom(
                 backgroundColor:
                     confirmColor ?? Theme.of(context).colorScheme.primary,
-                foregroundColor: AppColors.backgroundColor,
+                foregroundColor: AppColors.background,
               ),
               child: Text(confirmText),
             ),

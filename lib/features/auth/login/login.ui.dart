@@ -1,5 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:school360/core/constant/app_route.constant.dart';
 import 'package:school360/core/theme/color.theme.dart';
 import 'package:school360/shared/app_button.shared.dart';
 import 'package:school360/shared/app_checkbox.shared.dart';
@@ -40,6 +41,9 @@ class _LoginPageState extends State<LoginPage> {
     debugPrint('Email: $email');
     debugPrint('Password: $password');
 
+    // context.push(AppRoutes.student);
+    context.go(AppRoutes.parent);
+
     // Call your login API here.
   }
 
@@ -71,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 AppTextFormField(
                   controller: emailController,
-                  hintText: 'Enter your email',
+                  hintText: 'Enter your email ',
                   labelText: 'Email',
                   prefixIcon: Icons.email,
                   keyboardType: TextInputType.emailAddress,
@@ -103,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                       _obscurePassword
                           ? Icons.visibility
                           : Icons.visibility_off,
-                      color: AppColors.secondaryColor,
+                      color: AppColors.student,
                     ),
                     onPressed: () {
                       setState(() {
@@ -129,8 +133,8 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     AppCheckbox(
                       value: _isChecked,
-                      color: AppColors.textColor,
-                      activeColor: AppColors.primaryColor,
+                      color: AppColors.textPrimary,
+                      activeColor: AppColors.textPrimary,
 
                       onChanged: (value) {
                         setState(() {
@@ -156,8 +160,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   onPressed: _login,
-                  backgroundColor: AppColors.primaryColor,
-                  foregroundColor: AppColors.backgroundColor,
+                  backgroundColor: AppColors.student,
+                  foregroundColor: AppColors.background,
                 ),
 
                 SizedBox(height: 20),
@@ -165,28 +169,25 @@ class _LoginPageState extends State<LoginPage> {
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    style: TextStyle(color: AppColors.textColor),
+                    style: TextStyle(color: AppColors.textPrimary),
                     children: [
-                      TextSpan(text: "By logging in, you agree to our "),
-                      TextSpan(
-                        text: "Terms of Service ",
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                        ),
-                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      const TextSpan(
+                        text: "Accounts are created by the school.",
                       ),
-                      TextSpan(text: "and "),
-
                       TextSpan(
-                        text: "Privacy Policy.",
+                        text: "Need help? ",
                         style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
+                          color: AppColors.textPrimary,
+                          fontSize: 13,
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = () {},
+                      ),
+                      TextSpan(
+                        text: "Contact school office",
+                        style: TextStyle(
+                          color: AppColors.studentDark,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                        ),
                       ),
                     ],
                   ),
